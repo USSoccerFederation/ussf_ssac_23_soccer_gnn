@@ -27,9 +27,9 @@ Figure 2 shows which node and edge features had the biggest increase in predicti
 ![Figure 2: GNN Feature Importance](images/figure_2.png)
 
 ## 4. Conclusions
-In conclusion we can say that a complex state-of-the-art Graph Neural Networks architecture combined with Permutation Feature Importance can help
-digest vast amounts of data to identify opportunities for strategic and tactical improvement even on the highest levels of play, 
-because it allows coaches and (performance) analysts to identify individual features and their impact on counterattacking successfulness. 
+We show how complex state-of-the-art Graph Neural Networks combined with Permutation Feature Importance can help digest and analyze vast amounts of counterattacks,
+and perhaps other segments of play, and aid in determining what makes them successful or not. This can subsequently help coaches and (performance) analysts to identify 
+opportunities for strategic and tactical improvement in both counterattacking and defending counterattacks, at scale and individually, even at the highest levels of play.
 
 ------
 
