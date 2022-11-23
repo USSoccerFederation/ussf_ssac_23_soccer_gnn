@@ -1,37 +1,99 @@
-# A Graph Neural Network deep-dive into successful counterattacks
+## U.S. Soccer Federation 2023 MIT Sloan Sports Analytics Conference Research Repository. 
 
-## 1. Introduction
-A counterattack in soccer is a high speed, high intensity direct attack that can occur when a team transitions from a defensive state to an attacking state after regaining possession of the ball. 
-The aim is to create a goal-scoring opportunity by covering a lot of ground with minimal passes before the opposing team can recover their defensive shape.  
-The purpose of this research is to build state-of-the-art Graph Neural Networks (GNN), using synced StatsPerform event and SkillCorner spatiotemporal (broadcast) tracking data from the 2022 Major League Soccer (MLS) 
-and National Women Soccer League (NWSL) seasons, to calculate the likelihood of a counterattack being successful, and to determine what factors make a counterattack a success in both the men’s and women’s game. 
+This repository is provided alongside our paper: _"A Graph Neural Network deep-dive into successful counterattacks"_.
+It contains an interactive Python Jupyter Notebook for training GNNs using the [Spektral](https://graphneural.network/) library to try and improve upon our research.
 
-## 2. Methods
-The counterattacks are first algorithmically identified and labeled successful or unsuccessful following a set of event data driven rules comprised and verified in 
-collaboration with USWNT and USMNT Performance Analysts. Subsequently, these labels are applied to each individual frame of spatiotemporal tracking data.
+### Installing Jupyter Notebook using pip:
 
-![Figure 1: GNN Model Architecture](images/figure_1.png)
+  To install Jupyter using pip, first check if pip is updated in your system. Use the following command in the command prompt to update pip
+    
+  ```
+  python -m pip install --upgrade pip
+  ```
 
-Each individual frame is then converted into a graph representation consisting of an adjacency-, an edge feature-, and a node feature matrix.
-These matrices are then fed into a GNN architecture that is constructed with Pythons’ spektral library. The architecture (shown in Figure 1) consists of 3 GINConv layers, 
-a Global Average Pool layer, a Dense Layer with ReLu activation, a Dropout layer and ultimately a Sigmoid activation function.  
- 
-The GNN is trained on a balanced training set – 50% successful, 50% unsuccessful – for both the men’s and women’s data. For output stabilization the nodes are weighted in the loss computation. 
+  Once upgraded, use the following command to install Jupyter
+  ```
+  python -m pip install jupyter
+  ```
+  
+  Use the following command to launch Jupyter Notebook
+  ```
+  jupyter notebook
+  ```
+  
+  Once launched, you should be able to see the following screen
+  
+  <img width="1188" alt="image" src="https://user-images.githubusercontent.com/108815194/203169206-3526ced4-e63d-44b5-99bc-2d0075238742.png">
 
-## 3. Results
-The model achieves an ROC-AUC of 0.88 as well as a log-loss of 0.354, beating the baseline log-loss of 0.693 by a wide margin. 
-The models feature importance is determined using Permutation Feature Importance. This method breaks the relationship between individual features and the true result by applying a permutation to the feature’s values.
-This allows us to identify the importance of each individual feature by measuring the increase in prediction error.
-Figure 2 shows which node and edge features had the biggest increase in prediction error and are therefore the most important features for predicting a successful counterattack.
 
-![Figure 2: GNN Feature Importance](images/figure_2.png)
+### Installing the required Python libraries:
+  Make sure the requirement.txt file is in the directory. Navigate to the directory using command prompt and type the following command
+  ```
+  pip install -r requirements.txt
+  ```
 
-## 4. Conclusions
-We show how complex state-of-the-art Graph Neural Networks combined with Permutation Feature Importance can help digest and analyze vast amounts of counterattacks,
-and perhaps other segments of play, and aid in determining what makes them successful or not. This can subsequently help coaches and (performance) analysts to identify 
-opportunities for strategic and tactical improvement in both counterattacking and defending counterattacks, at scale and individually, even at the highest levels of play.
+### Running the script
+  * Navigate to the location where you have cloned the GitHub repository and open the interactive notebook.
+  * Open the .ipynb file.
+  * Run the first cell by clicking the play button or using the shortcut ```Shift + Enter``` through your keyboard. If all the libraries are installed succesffuly this code block should execute without throwing any errors.
+  * Run the subsequent cell blocks to load the data.
+  * Choose a file between men's data, women's data and combined dataset using the dropdown list.
+    * Men's dataset - MLS 2022 season
+    * Women's dataset - NWSL 2022 season + International Women's soccer
+    * Combined dataset - Combination of both men and women's data
+  * Choose the adjacency matrix from the dropdown list.
+    * normal - connects attacking players amongst themselves, defensive players amongst themselves and the attacking and defending players are conencted through the ball.
+    * delaunay - connects a few attacking players and defending players in a delaunay matrix fashion
+    * dense - connects all the players and the ball to each other
+    * dense_ap - connects all the attacking players to each other and defensive players.
+    * dense_dp - connects all the defending players to each other and attacking players.
+  
+  * Choose the Edge features and Node Features using the checkboxes.
+    * Edge Feature options:
+      * Player Distance - Distance between two players connected to each other
+      * Speed Difference - Speed difference between two players connected to each other
+      * Positional Sine angle - Sine of the angle created between two players in the edge
+      * Positional Cosine angle - Cosine of the angle created between two players in the edge
+      * Velocity Sine angle - Sine of the angle created between the velocity vectors of two players in the edge
+      * Velocity Cosine angle - Coine of the angle created between the velocity vectors of two players in the edge
+      
+    * Node Feature options:
+      * x coordinate - x coordinate on the 2D pitch for the player / ball
+      * y coordinate - y coordinate on the 2D pitch for the player / ball
+      * vx - Velocity vector's x coordinate
+      * vy - Velocity vector's y coordinate
+      * Velocity - magnitude of the velocity
+      *  Velocity Angle - angle made by the velocity vector
+      * Distance to Goal - distance of the player from the goal post
+      * Angle with Goal - angle made by the player with the goal
+      * Distance to Ball - distance from the ball (always 0 for the ball)
+      * Angle with Ball - angle made with the ball (always 0 for the ball)
+      * Attacking Team Flag - 1 if the team is attacking, 0 if not and for the ball
+      * Potential Receiver - 1 if player is a potential receiver, 0 otherwise
+    
+  * Update the graph neural training network configurations as per your requirement. You may also try chaning the network layers.
+  * Start the model training. It should stop after the epochs are completed. Check your training logloss score. If it is not satisfactory rerun the training block.
+  * Use the block for testing model logloss and ROC-AUC curve. 
+  * Further, you may opt to look at model calibration and also calculate the Expected Calibration Error (More details in the notebook text blocks).
+  * It is also possible to check which features contribute the most to the model performance. (**Note**: The ```Attacking Team Flag``` checkbox from the Node Features needs to be selected to calculate the feature importance.) Choose between attacking and defending players and note the differences via the box plot.
 
 ------
+
+### Citation
+
+If you use any of the data or files within this repository, please cite our paper.
+
+------
+
+### Data
+
+The data loading process is automated within the [Counterattack Jupyter Notebook](counterattack.ipynb), but it can also be obtained through the links below.
+
+- [Counterattacks Women](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/women.pkl)
+- [Counterattacks Men](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/men.pkl)
+- [Counterattacks Combined](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/combined.pkl)
+
+-----
 
 ### Requirements
 
