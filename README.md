@@ -9,7 +9,7 @@ The purpose of this research is to build gender-specific, first-of-their-kind Gr
 and uncover what factors make them successful in both men's and women's professional soccer. 
 These models are trained on a total of 20,863 frames of algorithmically identified counterattacking sequences from synchronized StatsPerform on-ball 
 event and SkillCorner spatiotemporal (broadcast) tracking data. This dataset is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
-This data linked to at the bottom of this page, and it is automatically loaded in the [Counterattack Jupyter Notebook](counterattack.ipynb).
+This data, linked to at the bottom of this page, is automatically loaded in the [Counterattack Jupyter Notebook](counterattack.ipynb).
 
 With this data we demonstrate that gender-specific Graph Neural Networks outperform architecturally identical gender-ambiguous models in predicting the successful outcome of 
 counterattacks. We show, using Permutation Feature Importance, that byline to byline speed, angle to the goal, angle to the ball and sideline to sideline speed are the node
