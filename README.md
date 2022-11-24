@@ -3,7 +3,6 @@
 This repository is provided alongside our paper: _"A Graph Neural Network deep-dive into successful counterattacks"_.
 It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) for training GNNs using the [Spektral](https://graphneural.network/) library to try and improve upon our research.
 
-
 ### Research Abstract
 The purpose of this research is to build gender-specific, first-of-their-kind Graph Neural Networks to model the likelihood of a counterattack being successful
 and uncover what factors make them successful in both men's and women's professional soccer. 
@@ -11,9 +10,15 @@ These models are trained on a total of 20,863 frames of algorithmically identifi
 event and SkillCorner spatiotemporal (broadcast) tracking data. This dataset is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
 This data, linked to at the bottom of this page, is automatically loaded in the [Counterattack Jupyter Notebook](counterattack.ipynb).
 
+![Model Architecture](img/prediction.png)
+
 With this data we demonstrate that gender-specific Graph Neural Networks outperform architecturally identical gender-ambiguous models in predicting the successful outcome of 
 counterattacks. We show, using Permutation Feature Importance, that byline to byline speed, angle to the goal, angle to the ball and sideline to sideline speed are the node
 features with the highest impact on model performance.
+
+### Model Architecture
+The architecture of the GNN model provided in the [Counterattack Jupyter Notebook](counterattack.ipynb) is depicted in the image below
+![Model Architecture](img/architecture.png)
 
 ### Installing Jupyter Notebook using pip:
 
