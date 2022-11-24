@@ -43,7 +43,10 @@ features with the highest impact on model performance.
   ```
   pip install -r requirements.txt
   ```
-
+Or for MacOS
+```
+  pip install -r requirements_macos.txt
+  ```
 ### Running the script
   * Navigate to the location where you have cloned the GitHub repository and open the interactive notebook.
   * Open the .ipynb file.
