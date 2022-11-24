@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+women.pkl
+men.pkl
+combined.pkl

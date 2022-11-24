@@ -1,0 +1,8 @@
+ipywidgets==7.7.1
+matplotlib==3.5.2
+numpy==1.21.5
+pandas==1.4.3
+scikit_learn==1.1.3
+spektral==1.2.0
+tensorflow_macos==2.10.0
+progressbar=2.5
