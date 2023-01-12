@@ -7,6 +7,8 @@ It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and al
 ### Authors
 #### Amod Sahasrabudhe
 [<img alt="alt_text" width="40px" src="img/linkedin.png"/>](https://www.linkedin.com/in/amod-sahasrabudhe/)
+[<img alt="alt_text" width="40px" src="img/twitter.png"/>](https://twitter.com/amod3598)
+
 #### Joris Bekkers
 [<img alt="alt_text" width="40px" src="img/linkedin.png"/>](https://www.linkedin.com/in/joris-bekkers-33138288/)
 [<img alt="alt_text" width="40px" src="img/twitter.png"/>](https://twitter.com/unravelsports)
@@ -15,8 +17,7 @@ It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and al
 The purpose of this research is to build gender-specific, first-of-their-kind Graph Neural Networks to model the likelihood of a counterattack being successful
 and uncover what factors make them successful in both men's and women's professional soccer. 
 These models are trained on a total of 20,863 frames of algorithmically identified counterattacking sequences from synchronized StatsPerform on-ball 
-event and SkillCorner spatiotemporal (broadcast) tracking data. This dataset is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
-This data, linked to at the bottom of this page, is automatically loaded in the [Counterattack Jupyter Notebook](counterattack.ipynb).
+event and SkillCorner spatiotemporal (broadcast) tracking data. The [data](#data) - easily accessible within the [Counterattack Jupyter Notebook](counterattack.ipynb) - is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
 
 ![Model Architecture](img/prediction.png)
 
