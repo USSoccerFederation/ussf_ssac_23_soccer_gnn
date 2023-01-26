@@ -123,11 +123,11 @@ We provide two different types of datasets:
 This dataset is used within our research paper. It contains only Graph representations of tracking data frames that are associated with an event that happens
 within a counterattacking sequence. 
 ##### Samples:
-| Dataset  | Competitions                                                    | Sample Size  <br/>(Individual Graphs)  |
-|----------|-----------------------------------------------------------------|--------------|
-| Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 3720         |
-| Men      | MLS (2022)                                                      | 17143        |
-| Combined | All                                                             | 20863        |
+| Dataset  | Competitions                                                    | Sample Size  <br/>(Individual Graphs) |
+|----------|-----------------------------------------------------------------|---------------------------------------|
+| Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 3,720                                 |
+| Men      | MLS (2022)                                                      | 17,143                                |
+| Combined | All                                                             | 20,863                                |
 ##### Labels:
 Every Graph of an event that is part of a counterattacking sequence where eventually the ball reaches the opposing team's penalty area is labeled a success (1).
 ##### Balance:
@@ -156,9 +156,9 @@ It contains Graph representations of every tracking data frame that is associate
 
 ##### Samples:
 | Dataset  | Competitions                                                    | Sample Size <br/>(Individual Graphs) |
-|----------|-----------------------------------------------------------------|---------------------------------|
-| Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 103381                          |
-| Men      | MLS (2022, approx. 32% of games)                                | 104628                          |
+|----------|-----------------------------------------------------------------|--------------------------------------|
+| Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 103,381                              |
+| Men      | MLS (2022, approx. 32% of games)                                | 104,628                              |
 ##### Labels:
 Every Graph frame that is part of a counterattacking sequence that leads to a goal is labeled a success (1).
 ##### Balance:
