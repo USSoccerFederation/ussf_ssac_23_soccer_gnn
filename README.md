@@ -12,6 +12,7 @@ It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and al
 #### Joris Bekkers
 [<img alt="alt_text" width="40px" src="img/linkedin.png"/>](https://www.linkedin.com/in/joris-bekkers-33138288/)
 [<img alt="alt_text" width="40px" src="img/twitter.png"/>](https://twitter.com/unravelsports)
+[<img alt="alt_text" width="40px" src="img/github.png"/>](https://unravelsports.github.io)
 
 ### Research Abstract
 The purpose of this research is to build gender-specific, first-of-their-kind Graph Neural Networks to model the likelihood of a counterattack being successful
