@@ -2,7 +2,7 @@
 ### _A Graph Neural Network deep-dive into successful counterattacks_
 
 This repository is provided alongside the paper: _"A Graph Neural Network deep-dive into successful counterattacks"_.
-It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#data)) for training GNNs using the [Spektral](https://graphneural.network/) library to try and improve upon our research.
+It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library to try and improve upon our research.
 
 ### Authors
 #### Amod Sahasrabudhe
@@ -17,7 +17,7 @@ It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and al
 The purpose of this research is to build gender-specific, first-of-their-kind Graph Neural Networks to model the likelihood of a counterattack being successful
 and uncover what factors make them successful in both men's and women's professional soccer. 
 These models are trained on a total of 20,863 frames of algorithmically identified counterattacking sequences from synchronized StatsPerform on-ball 
-event and SkillCorner spatiotemporal (broadcast) tracking data. The [data](#data) - easily accessible within the [Counterattack Jupyter Notebook](counterattack.ipynb) - is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
+event and SkillCorner spatiotemporal (broadcast) tracking data. The [data](#datasets) - easily accessible within the [Counterattack Jupyter Notebook](counterattack.ipynb) - is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
 
 ![Model Architecture](img/prediction.png)
 
@@ -114,14 +114,71 @@ If you use any of the data or files within this repository, please cite our pape
 
 ------
 
-### Data
+### Datasets
 
+We provide two different types of datasets:
+
+#### 1. Event Frames Only Balanced Dataset
+This dataset is used within our research paper. It contains only Graph representations of tracking data frames that are associated with an event that happens
+within a counterattacking sequence. 
+##### Samples:
+| Dataset  | Competitions                                                    | Sample Size  <br/>(Individual Graphs)  |
+|----------|-----------------------------------------------------------------|--------------|
+| Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 3720         |
+| Men      | MLS (2022)                                                      | 17143        |
+| Combined | All                                                             | 20863        |
+##### Labels:
+Every Graph of an event that is part of a counterattacking sequence where eventually the ball reaches the opposing team's penalty area is labeled a success (1).
+##### Balance:
+This dataset has 50% successful and 50% unsuccessful labels.
+##### Structure:
+
+```json
+{
+  "normal": {
+    "a": [AdjMatrixGraph0, AdjMatrixGraph1, ... AdjMatrixGraphN],
+    "x": [NodeFeatureMatrixGraph0, NodeFeatureMatrixGraph1, ... NodeFeatureMatrixGraphNN],
+    "e": [EdgeFeatureMatrixGraph0, EdgeFeatureMatrixGraph1, ... EdgeFeatureMatrixGraphN]
+  }, <- similar dictionaries for each other Adjacency Matrix Type ("delaunay", "dense", "dense_ap", "dense_dp")
+  "binary": [[LabelGraph0], [LabelGraph1]...[LabelGraphN]]
+}
+```
 The data loading process is automated within the [Counterattack Jupyter Notebook](counterattack.ipynb), but it can also be obtained through the links below.
 
 - [Counterattacks Women](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/women.pkl)
 - [Counterattacks Men](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/men.pkl)
 - [Counterattacks Combined](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/combined.pkl)
 
+#### 2. Full Frames Imbalanced Dataset
+This dataset is an _additional_ dataset that was **not** used within the research paper. 
+It contains Graph representations of every tracking data frame that is associated with a counterattacking sequence. 
+
+##### Samples:
+| Dataset  | Competitions                                                    | Sample Size <br/>(Individual Graphs) |
+|----------|-----------------------------------------------------------------|---------------------------------|
+| Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 103381                          |
+| Men      | MLS (2022, approx. 32% of games)                                | 104628                          |
+##### Labels:
+Every Graph frame that is part of a counterattacking sequence that leads to a goal is labeled a success (1).
+##### Balance:
+This dataset has approx. 5% successful and approx. 95% unsuccessful labels.
+##### Structure:
+The structure is slightly different, as we only provide the `normal` adjacency matrix. 
+
+We also provide an `id` label. This label number is the same for all frames that belong to the same sequence.
+We can use this Sequence ID value to split the test & train data such that we do not add parts of a single sequence to both the test and train set.
+Doing this would result in leaking information between test and train set. 
+```json
+{
+  "a": [AdjMatrixGraph0, AdjMatrixGraph1, ... AdjMatrixGraphN],
+  "x": [NodeFeatureMatrixGraph0, NodeFeatureMatrixGraph1, ... NodeFeatureMatrixGraphNN],
+  "e": [EdgeFeatureMatrixGraph0, EdgeFeatureMatrixGraph1, ... EdgeFeatureMatrixGraphN]
+  "label": [[LabelGraph0], [LabelGraph1]...[LabelGraphN]],
+  "id": [SequenceIDGraph1, SequenceIDGraph2, ... SequenceIDGraph1]
+}
+```
+- [Counterattacks Women Imbalanced All Frames](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/women_imbalanced.pkl)
+- [Counterattacks Men Imbalanced All Frames](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/men_imbalanced.pkl)
 -----
 
 ### Requirements
