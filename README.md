@@ -167,8 +167,8 @@ This dataset has approx. 5% successful and approx. 95% unsuccessful labels.
 The structure is slightly different, as we only provide the `normal` adjacency matrix. 
 
 We also provide an `id` label. This label number is the same for all frames that belong to the same sequence.
-We can use this Sequence ID value to split the test & train data such that we do not add parts of a single sequence to both the test and train set.
-Doing this would result in leaking information between test and train set. 
+Use this Sequence ID value to split the test & train data such that we do not add parts of a single sequence to both the test and train set.
+Doing this would result in leaking information between test and train set. To do this splitting see [split_sequences.py](split_sequences.py). 
 ```json
 {
   "a": [AdjMatrixGraph0, AdjMatrixGraph1, ... AdjMatrixGraphN],
