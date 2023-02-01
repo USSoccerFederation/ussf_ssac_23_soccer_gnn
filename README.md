@@ -134,7 +134,7 @@ Every Graph of an event that is part of a counterattacking sequence where eventu
 This dataset has 50% successful and 50% unsuccessful labels.
 ##### Structure:
 
-```json
+```text
 {
   "normal": {
     "a": [AdjMatrixGraph0, AdjMatrixGraph1, ... AdjMatrixGraphN],
@@ -149,6 +149,8 @@ The data loading process is automated within the [Counterattack Jupyter Notebook
 - [Counterattacks Women](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/women.pkl)
 - [Counterattacks Men](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/men.pkl)
 - [Counterattacks Combined](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/combined.pkl)
+
+_Note: Node and Edge feature names for these datasets are listed in [Counterattack Jupyter Notebook](counterattack.ipynb)_
 
 #### 2. Full Frames Imbalanced Dataset
 This dataset is an _additional_ dataset that was **not** used within the research paper. 
@@ -169,14 +171,14 @@ The structure is slightly different, as we only provide the `normal` adjacency m
 We also provide an `id` label. This label number is the same for all frames that belong to the same sequence.
 Use this Sequence ID value to split the test & train data such that we do not add parts of a single sequence to both the test and train set.
 Doing this would result in leaking information between test and train set. To do this splitting see [split_sequences.py](split_sequences.py). 
-```json
+```text
 {
   "a": [AdjMatrixGraph0, AdjMatrixGraph1, ... AdjMatrixGraphN],
   "x": [NodeFeatureMatrixGraph0, NodeFeatureMatrixGraph1, ... NodeFeatureMatrixGraphNN],
   "e": [EdgeFeatureMatrixGraph0, EdgeFeatureMatrixGraph1, ... EdgeFeatureMatrixGraphN]
   "label": [[LabelGraph0], [LabelGraph1]...[LabelGraphN]],
   "id": [SequenceIDGraph0, SequenceIDGraph1, ... SequenceIDGraphN],
-  "node_feature_names": ["x", "y", "vx",... "att_team"],
+  "node_feature_names": ["x", "y", "vx",... "att_team"], 
   "edge_feature_names": ["distance", ...]
 }
 ```
