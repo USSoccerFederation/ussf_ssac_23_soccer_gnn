@@ -175,7 +175,9 @@ Doing this would result in leaking information between test and train set.
   "x": [NodeFeatureMatrixGraph0, NodeFeatureMatrixGraph1, ... NodeFeatureMatrixGraphNN],
   "e": [EdgeFeatureMatrixGraph0, EdgeFeatureMatrixGraph1, ... EdgeFeatureMatrixGraphN]
   "label": [[LabelGraph0], [LabelGraph1]...[LabelGraphN]],
-  "id": [SequenceIDGraph1, SequenceIDGraph2, ... SequenceIDGraph1]
+  "id": [SequenceIDGraph0, SequenceIDGraph1, ... SequenceIDGraphN],
+  "node_feature_names": ["x", "y", "vx",... "att_team"],
+  "edge_feature_names": ["distance", ...]
 }
 ```
 - [Counterattacks Women Imbalanced All Frames](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/women_imbalanced.pkl)
