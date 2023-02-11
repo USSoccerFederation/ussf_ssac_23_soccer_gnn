@@ -15,7 +15,7 @@ It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and al
 [<img alt="alt_text" width="40px" src="img/twitter.png"/>](https://twitter.com/unravelsports)
 [<img alt="alt_text" width="40px" src="img/github.png"/>](https://unravelsports.github.io)
 
-### Research Abstract
+## Research Abstract
 The purpose of this research is to build gender-specific, first-of-their-kind Graph Neural Networks to model the likelihood of a counterattack being successful
 and uncover what factors make them successful in both men's and women's professional soccer. 
 These models are trained on a total of 20,863 frames of algorithmically identified counterattacking sequences from synchronized StatsPerform on-ball 
