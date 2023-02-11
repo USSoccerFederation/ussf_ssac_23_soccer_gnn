@@ -5,7 +5,7 @@
 This repository is provided alongside the paper: _"A Graph Neural Network deep-dive into successful counterattacks"_.
 It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library to try and improve upon our research.
 
-### Authors
+## Authors
 #### Amod Sahasrabudhe
 [<img alt="alt_text" width="40px" src="img/linkedin.png"/>](https://www.linkedin.com/in/amod-sahasrabudhe/)
 [<img alt="alt_text" width="40px" src="img/twitter.png"/>](https://twitter.com/amod3598)
@@ -27,11 +27,11 @@ With this data we demonstrate that gender-specific Graph Neural Networks outperf
 counterattacks. We show, using Permutation Feature Importance, that byline to byline speed, angle to the goal, angle to the ball and sideline to sideline speed are the node
 features with the highest impact on model performance.
 
-### Model Architecture
+## Model Architecture
 The architecture of the GNN model provided in the [Counterattack Jupyter Notebook](counterattack.ipynb) is depicted in the image below
 ![Model Architecture](img/architecture.png)
 
-### Installing Jupyter Notebook using pip:
+## Installing Jupyter Notebook using pip:
 
   To install Jupyter using pip, first check if pip is updated in your system. Use the following command in the command prompt to update pip
     
@@ -54,7 +54,7 @@ The architecture of the GNN model provided in the [Counterattack Jupyter Noteboo
   <img width="1188" alt="image" src="https://user-images.githubusercontent.com/108815194/203169206-3526ced4-e63d-44b5-99bc-2d0075238742.png">
 
 
-### Installing the required Python libraries:
+## Installing the required Python libraries:
   Make sure the requirement.txt file is in the directory. Navigate to the directory using command prompt and type the following command
   ```
   pip install -r requirements.txt
@@ -63,7 +63,7 @@ Or for MacOS
 ```
   pip install -r requirements_macos.txt
   ```
-### Running the script
+## Running the script
   * Navigate to the location where you have cloned the GitHub repository and open the interactive notebook.
   * Open the .ipynb file.
   * Run the first cell by clicking the play button or using the shortcut ```Shift + Enter``` through your keyboard. If all the libraries are installed succesffuly this code block should execute without throwing any errors.
@@ -108,32 +108,28 @@ Or for MacOS
   * Further, you may opt to look at model calibration and also calculate the Expected Calibration Error (More details in the notebook text blocks).
   * It is also possible to check which features contribute the most to the model performance. (**Note**: The ```Attacking Team Flag``` checkbox from the Node Features needs to be selected to calculate the feature importance.) Choose between attacking and defending players and note the differences via the box plot.
 
-------
-
-### Citation
+## Citation
 
 If you use any of the data or files within this repository, please cite our paper.
 
-------
-
-### Datasets
+## Datasets
 
 We provide two different types of datasets:
 
-#### 1. Event Frames Only Balanced Dataset
+### 1. Event Frames Only Balanced Dataset
 This dataset is used within our research paper. It contains only Graph representations of tracking data frames that are associated with an event that happens
 within a counterattacking sequence. 
-##### Samples:
+#### Samples:
 | Dataset  | Competitions                                                    | Sample Size  <br/>(Individual Graphs) |
 |----------|-----------------------------------------------------------------|---------------------------------------|
 | Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 3,720                                 |
 | Men      | MLS (2022)                                                      | 17,143                                |
 | Combined | All                                                             | 20,863                                |
-##### Labels:
+#### Labels:
 Every Graph of an event that is part of a counterattacking sequence where eventually the ball reaches the opposing team's penalty area is labeled a success (1).
-##### Balance:
+#### Balance:
 This dataset has 50% successful and 50% unsuccessful labels.
-##### Structure:
+#### Structure:
 
 ```text
 {
@@ -153,20 +149,20 @@ The data loading process is automated within the [Counterattack Jupyter Notebook
 
 _Note: Node and Edge feature names for these datasets are listed in [Counterattack Jupyter Notebook](counterattack.ipynb)_
 
-#### 2. Full Frames Imbalanced Dataset
+### 2. Full Frames Imbalanced Dataset
 This dataset is an _additional_ dataset that was **not** used within the research paper. 
 It contains Graph representations of every tracking data frame that is associated with a counterattacking sequence. 
 
-##### Samples:
+#### Samples:
 | Dataset  | Competitions                                                    | Sample Size <br/>(Individual Graphs) |
 |----------|-----------------------------------------------------------------|--------------------------------------|
 | Women    | NWSL (2022) <br/>Int. Friendlies <br/>SheBelieves <br/>Olympics | 103,381                              |
 | Men      | MLS (2022, approx. 32% of games)                                | 104,628                              |
-##### Labels:
+#### Labels:
 Every Graph frame that is part of a counterattacking sequence that leads to a goal is labeled a success (1).
-##### Balance:
+#### Balance:
 This dataset has approx. 5% successful and approx. 95% unsuccessful labels.
-##### Structure:
+#### Structure:
 The structure is slightly different, as we only provide the `normal` adjacency matrix. 
 
 We also provide an `id` label. This label number is the same for all frames that belong to the same sequence.
@@ -185,8 +181,7 @@ Doing this would result in leaking information between test and train set. To do
 ```
 - [Counterattacks Women Imbalanced All Frames](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/women_imbalanced.pkl)
 - [Counterattacks Men Imbalanced All Frames](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/counterattack/men_imbalanced.pkl)
------
 
-### Requirements
+## Requirements
 
 - Python 3.9+
