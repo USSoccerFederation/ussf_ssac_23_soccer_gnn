@@ -1,5 +1,6 @@
-## U.S. Soccer Federation | 2023 MIT Sloan Sports Analytics Conference Research Repository. 
-### _A Graph Neural Network deep-dive into successful counterattacks_
+![U.S. Soccer Federation | A Graph Neural Network deep-dive into successful counterattacks](img/header.png)
+
+## MIT Sloan Sports Analytics Conference 2023 Research Repository 
 
 This repository is provided alongside the paper: _"A Graph Neural Network deep-dive into successful counterattacks"_.
 It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library to try and improve upon our research.
