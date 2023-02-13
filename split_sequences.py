@@ -50,7 +50,10 @@ def randomly_split_set_test_train_along_sequence_ids(data, test_train_split, see
 
         if seed:
             random.seed(seed)
-        unique_sequence_ids_list = list(unique_sequence_ids)
+        # sort the list of unique ids, such that the random seed actually works
+        # it wouldn't work when just using the set, because set returns the values in a random order
+        # that is not controlled by the seed
+        unique_sequence_ids_list = sorted(list(unique_sequence_ids))
         random.shuffle(unique_sequence_ids_list)
 
         i = 0
