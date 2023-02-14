@@ -31,6 +31,13 @@ features with the highest impact on model performance.
 The architecture of the GNN model provided in the [Counterattack Jupyter Notebook](counterattack.ipynb) is depicted in the image below
 ![Model Architecture](img/architecture.png)
 
+## Graph Configuration
+Our preferred Graph configuration is depicted below. As you can see in [Counterattack Jupyter Notebook](counterattack.ipynb) you are free to choose your own configuration by selecting from an assortment of 
+Adjaceny Matrices, Edge Features and Node Features, more on this [below](#Jupiter Notebook)
+
+![Graph Configuration](img/graph.png)
+
+
 ## Installing Jupyter Notebook using pip:
 
   To install Jupyter using pip, first check if pip is updated in your system. Use the following command in the command prompt to update pip
@@ -63,7 +70,7 @@ Or for MacOS
 ```
   pip install -r requirements_macos.txt
   ```
-## Running the script
+## Jupiter Notebook
   * Navigate to the location where you have cloned the GitHub repository and open the interactive notebook.
   * Open the .ipynb file.
   * Run the first cell by clicking the play button or using the shortcut ```Shift + Enter``` through your keyboard. If all the libraries are installed succesffuly this code block should execute without throwing any errors.
