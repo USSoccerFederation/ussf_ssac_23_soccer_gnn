@@ -29,7 +29,7 @@ features with the highest impact on model performance.
 
 ## Model Architecture
 The architecture of the GNN model provided in the [Counterattack Jupyter Notebook](counterattack.ipynb) is depicted in the image below
-![Model Architecture](img/architecture.png)
+![Model Architecture](img/model.png)
 
 ## Graph Configuration
 Our preferred Graph configuration is depicted below. As you can see in [Counterattack Jupyter Notebook](counterattack.ipynb) you are free to choose your own configuration by selecting from an assortment of 
