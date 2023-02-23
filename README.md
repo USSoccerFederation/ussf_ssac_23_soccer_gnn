@@ -117,6 +117,15 @@ Or for MacOS
   * Further, you may opt to look at model calibration and also calculate the Expected Calibration Error (More details in the notebook text blocks).
   * It is also possible to check which features contribute the most to the model performance. (**Note**: The ```Attacking Team Flag``` checkbox from the Node Features needs to be selected to calculate the feature importance.) Choose between attacking and defending players and note the differences via the box plot.
 
+## Research Ideas
+- Change the model architecture by introducing different configurations for the [Convolutional layers](https://graphneural.network/layers/convolution/), [Pooling layers](https://graphneural.network/layers/convolution/) and Hyper Parameters.
+- Choose different adjacency matrices and different combinations of node features and edge features.
+- Create a "Gender-Aware" model as suggested by [StatsBomb](https://statsbomb.com/articles/soccer/analytics-and-modelling-in-womens-football/). Perhaps this can be achieved by adding a node feature to each node in each graph specifying the gender.
+- Use the [Imbalanced Dataset](#datasets) to build a robust (gendered) counterattacking success prediction model 
+- Analyze the features and their importance to counterattack success more in-depth. This can help uncover for example, for which players on what position it is important to have a high (or low) `vx` etc.
+- Analyze other aspects of counterattacks. For example: what is the impact of having more players behind the ball when defending, or how much is the impact of space reduction around the player on the ball.
+- etc. 
+
 ## Citation
 
 If you use any of the data or files within this repository, please cite our paper.
