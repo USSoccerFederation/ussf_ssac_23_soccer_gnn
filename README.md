@@ -21,11 +21,13 @@ and uncover what factors make them successful in both men's and women's professi
 These models are trained on a total of 20,863 frames of algorithmically identified counterattacking sequences from synchronized StatsPerform on-ball 
 event and SkillCorner spatiotemporal (broadcast) tracking data. The [data](#datasets) - easily accessible within the [Counterattack Jupyter Notebook](counterattack.ipynb) - is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
 
-![Model Architecture](img/prediction.png)
+![Example Sequence Prediction](img/attack.gif)
 
 With this data we demonstrate that gender-specific Graph Neural Networks outperform architecturally identical gender-ambiguous models in predicting the successful outcome of 
 counterattacks. We show, using Permutation Feature Importance, that byline to byline speed, angle to the goal, angle to the ball and sideline to sideline speed are the node
 features with the highest impact on model performance.
+
+![Improvement](img/prediction.png)
 
 ## Model Architecture
 The architecture of the GNN model provided in the [Counterattack Jupyter Notebook](counterattack.ipynb) is depicted in the image below
