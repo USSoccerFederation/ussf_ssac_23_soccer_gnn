@@ -2,8 +2,8 @@
 
 ## MIT Sloan Sports Analytics Conference 2023 Research Repository 
 
-This repository is provided alongside the paper: _"A Graph Neural Network deep-dive into successful counterattacks"_.
-It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library to try and improve upon our research.
+This repository is provided alongside the paper: _"A Graph Neural Network deep-dive into successful counterattacks"_. This paper is one of the finalists of the [2023 MIT Sloan Sports Analytics Conference Research Paper Competition](https://www.sloansportsconference.com/research-paper-competition#Research-Paper-Finalists).
+It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library. 
 
 ## Authors
 #### Amod Sahasrabudhe
@@ -17,7 +17,7 @@ It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and al
 
 ## Research Abstract
 The purpose of this research is to build gender-specific, first-of-their-kind Graph Neural Networks to model the likelihood of a counterattack being successful
-and uncover what factors make them successful in both men's and women's professional soccer. 
+and to uncover what factors make them successful in both men's and women's professional soccer. 
 These models are trained on a total of 20,863 frames of algorithmically identified counterattacking sequences from synchronized StatsPerform on-ball 
 event and SkillCorner spatiotemporal (broadcast) tracking data. The [data](#datasets) - easily accessible within the [Counterattack Jupyter Notebook](counterattack.ipynb) - is derived from 632 games of MLS (2022), NWSL (2022) and international women’s soccer (2020-2022).
 
@@ -120,6 +120,16 @@ Or for MacOS
 ## Citation
 
 If you use any of the data or files within this repository, please cite our paper.
+
+```text
+@inproceedings{sahasrabudhe2023graph,
+  title={A Graph Neural Network deep-dive into successful counterattacks},
+  author={Sahasrabudhe, Amod and Bekkers, Joris},
+  booktitle={17th Annual MIT Sloan Sports Analytics Conference. Boston, MA, USA: MIT},
+  pages={15},
+  year={2023}
+}
+```
 
 ## Datasets
 
