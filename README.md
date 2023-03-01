@@ -2,7 +2,7 @@
 
 ## MIT Sloan Sports Analytics Conference 2023 Research Repository 
 
-This repository is provided alongside the paper: [_"A Graph Neural Network deep-dive into successful counterattacks"_](https://global-uploads.webflow.com/5f1af76ed86d6771ad48324b/63fe9853f55168a189c5d79c_A%20Graph%20Neural%20Network%20deep-dive%20into%20successful%20counterattacks.pdf)[pdf]. This paper is one of the finalists of the [2023 MIT Sloan Sports Analytics Conference Research Paper Competition](https://www.sloansportsconference.com/research-paper-competition#Research-Paper-Finalists).
+This repository is provided alongside the paper: [_"A Graph Neural Network deep-dive into successful counterattacks"_](https://global-uploads.webflow.com/5f1af76ed86d6771ad48324b/63fe9853f55168a189c5d79c_A%20Graph%20Neural%20Network%20deep-dive%20into%20successful%20counterattacks.pdf)[pdf]. This paper is one of the finalists of the [2023 MIT Sloan Sports Analytics Conference Research Paper Competition](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf).
 It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library. 
 
 ## Authors
