@@ -2,7 +2,7 @@
 
 ## MIT Sloan Sports Analytics Conference 2023 Research Repository 
 
-This repository is provided alongside the paper: [_"A Graph Neural Network deep-dive into successful counterattacks"_](https://global-uploads.webflow.com/5f1af76ed86d6771ad48324b/63fe9853f55168a189c5d79c_A%20Graph%20Neural%20Network%20deep-dive%20into%20successful%20counterattacks.pdf)[pdf]. This paper is one of the finalists of the [2023 MIT Sloan Sports Analytics Conference Research Paper Competition](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf).
+This repository is provided alongside the paper: [_"A Graph Neural Network deep-dive into successful counterattacks"_](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf)[pdf]. This paper is one of the finalists of the [2023 MIT Sloan Sports Analytics Conference Research Paper Competition](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf).
 It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library. 
 
 ## Authors
@@ -28,6 +28,10 @@ counterattacks. We show, using Permutation Feature Importance, that byline to by
 features with the highest impact on model performance.
 
 ![Improvement](img/prediction.png)
+
+## MIT Sloan Sports Analytics Conference 2023 Presentation
+[![Our Talk on YouTube](https://img.youtube.com/vi/3ozD-fvQmOg/0.jpg)](https://www.youtube.com/watch?v=3ozD-fvQmOg)
+
 
 ## Model Architecture
 The architecture of the GNN model provided in the [Counterattack Jupyter Notebook](counterattack.ipynb) is depicted in the image below
@@ -129,6 +133,8 @@ Or for MacOS
 ## Citation
 
 If you use any of the data or files within this repository, please cite our paper.
+
+- [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=eerdAe8AAAAJ&citation_for_view=eerdAe8AAAAJ:d1gkVwhDpl0C)
 
 ```text
 @inproceedings{sahasrabudhe2023graph,
