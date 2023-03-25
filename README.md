@@ -40,7 +40,7 @@ The architecture of the GNN model provided in the [Counterattack Jupyter Noteboo
 
 ## Graph Configuration
 Our preferred Graph configuration is depicted below. As you can see in [Counterattack Jupyter Notebook](counterattack.ipynb) you are free to choose your own configuration by selecting from an assortment of 
-Adjaceny Matrices, Edge Features and Node Features, more on this [below](#Jupyter Notebook)
+Adjaceny Matrices, Edge Features and Node Features, more on this [below](#Jupyter-Notebook)
 
 ![Graph Configuration](img/graph.png)
 
