@@ -29,7 +29,8 @@ features with the highest impact on model performance.
 
 ![Improvement](img/prediction.png)
 
-## MIT Sloan Sports Analytics Conference 2023 Presentation
+## Presentation (YouTube)
+Our MIT Sloan Sports Analytics Conference 2023 presentation has made its way to YouTube, see below:
 [![Our Talk on YouTube](https://img.youtube.com/vi/3ozD-fvQmOg/0.jpg)](https://www.youtube.com/watch?v=3ozD-fvQmOg)
 
 
