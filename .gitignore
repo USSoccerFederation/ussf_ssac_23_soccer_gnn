@@ -128,12 +128,13 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-women.pkl
+data/women.pkl
 men.pkl
 combined.pkl
 
 src/
 models/
+data/
 config.py
 pipeline.ipynb
 

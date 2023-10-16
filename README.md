@@ -1,8 +1,11 @@
 ![U.S. Soccer Federation | A Graph Neural Network deep-dive into successful counterattacks](img/header.png)
 
+> ⚠️ **NOTE**: If you are having trouble automatically loading the data within Jupyter Notebook please find all relevant data files (and the associated paper) in the [Google Drive folder](https://drive.google.com/drive/folders/12F8B-AARr0otiYxE0Rvxbuckf6gjkqvE)
+
+
 ## MIT Sloan Sports Analytics Conference 2023 Research Repository 
 
-This repository is provided alongside the paper: [_"A Graph Neural Network deep-dive into successful counterattacks"_](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf)[pdf]. This paper is one of the finalists of the [2023 MIT Sloan Sports Analytics Conference Research Paper Competition](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf).
+This repository is provided alongside the paper: [_"A Graph Neural Network deep-dive into successful counterattacks"_](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf)[pdf] ([Mirror 1](https://drive.google.com/file/d/19IQbrHY-6AS7tJ7CnkcTORK8ztg5LVHa/view)). This paper is one of the finalists of the [2023 MIT Sloan Sports Analytics Conference Research Paper Competition](https://ussf-ssac-23-soccer-gnn.s3.us-east-2.amazonaws.com/public/Sahasrabudhe_Bekkers_SSAC23.pdf).
 It contains an interactive [Python Jupyter Notebook](counterattack.ipynb) and all relevant datasets ([see below](#datasets)) for training GNNs using the [Spektral](https://graphneural.network/) library. 
 
 ## Authors
